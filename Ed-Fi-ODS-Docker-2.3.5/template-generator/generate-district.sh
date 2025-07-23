@@ -62,10 +62,10 @@ generate_ssl_cert() {
     mkdir -p "$cert_dir"
     
     # Generate private key
-    openssl genrsa -out "$cert_dir/$district_id.key" 2048
+    openssl genrsa -out "$cert_dir/server.key" 2048
     
     # Generate certificate
-    openssl req -new -x509 -key "$cert_dir/$district_id.key" -out "$cert_dir/$district_id.crt" -days 365 \
+    openssl req -new -x509 -key "$cert_dir/server.key" -out "$cert_dir/server.crt" -days 365 \
         -subj "/C=US/ST=State/L=City/O=Ed-Fi District $district_id/CN=$hostname"
     
     log_success "SSL certificate generated for $hostname"
