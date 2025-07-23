@@ -1,0 +1,58 @@
+{
+  "districts": [
+    {
+      "id": "255901",
+      "name": "District_255901",
+      "network_name": "district-255901-network",
+      "ports": {
+        "api": 8101,
+        "admin": 8102,
+        "swagger": 8103,
+        "postgres": 5101,
+        "pgbouncer_admin": 6101,
+        "pgbouncer_ods": 6102,
+        "nginx": 8100
+      },
+      "ssl": {
+        "hostname": "district255901.local",
+        "cert_file": "255901.crt",
+        "key_file": "255901.key"
+      },
+      "databases": {
+        "admin": "EdFi_Admin_255901",
+        "security": "EdFi_Security_255901",
+        "ods": "EdFi_Ods_255901"
+      }
+    },
+    {
+      "id": "255902",
+      "name": "District_255902", 
+      "network_name": "district-255902-network",
+      "ports": {
+        "api": 8201,
+        "admin": 8202,
+        "swagger": 8203,
+        "postgres": 5201,
+        "pgbouncer_admin": 6201,
+        "pgbouncer_ods": 6202,
+        "nginx": 8200
+      },
+      "ssl": {
+        "hostname": "district255902.local",
+        "cert_file": "255902.crt", 
+        "key_file": "255902.key"
+      },
+      "databases": {
+        "admin": "EdFi_Admin_255902",
+        "security": "EdFi_Security_255902",
+        "ods": "EdFi_Ods_255902"
+      }
+    }
+  ],
+  "common": {
+    "postgres_version": "13-alpine",
+    "pgbouncer_version": "latest",
+    "edfi_tag": "v2",
+    "adminapp_tag": "v2"
+  }
+}
