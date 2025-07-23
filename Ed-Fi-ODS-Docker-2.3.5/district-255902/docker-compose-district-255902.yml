@@ -191,9 +191,9 @@ services:
       NPG_ADMIN_MAX_POOL_SIZE_ODS: "${NPG_ADMIN_MAX_POOL_SIZE_ODS}"
       NPG_ADMIN_MAX_POOL_SIZE_ADMIN: "${NPG_ADMIN_MAX_POOL_SIZE_ADMIN}"
       NPG_ADMIN_MAX_POOL_SIZE_SECURITY: "${NPG_ADMIN_MAX_POOL_SIZE_SECURITY}"
-      PathBase: "/adminapp"
-      UseReverseProxyHeaders: "true"
-      ASPNETCORE_FORWARDEDHEADERS_ENABLED: "true"
+      ASPNETCORE_PATHBASE: "/adminapp"
+      ASPNETCORE_FORWARDEDHEADERS_ENABLED: "false"
+      ASPNETCORE_HTTPS_PORT: "${ASPNETCORE_HTTPS_PORT}"
     volumes:
       - ${LOGS_FOLDER}:/app/logs
       - adminapp-bulk-hashcache-255902:/app/BulkUploadHashCache

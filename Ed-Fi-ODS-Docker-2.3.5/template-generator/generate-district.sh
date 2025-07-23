@@ -73,7 +73,7 @@ generate_ssl_cert() {
 
 # Generate encryption key (safe for sed)
 generate_encryption_key() {
-    openssl rand -hex 32
+    openssl rand -base64 32
 }
 
 # Process single district
