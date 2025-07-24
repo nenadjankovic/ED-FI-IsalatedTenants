@@ -194,6 +194,7 @@ services:
       ASPNETCORE_PATHBASE: "/adminapp"
       ASPNETCORE_FORWARDEDHEADERS_ENABLED: "false"
       ASPNETCORE_HTTPS_PORT: "${ASPNETCORE_HTTPS_PORT}"
+      ASPNETCORE_FORWARDEDHEADERS_ENABLED: "true"
     volumes:
       - ${LOGS_FOLDER}:/app/logs
       - adminapp-bulk-hashcache-255902:/app/BulkUploadHashCache
